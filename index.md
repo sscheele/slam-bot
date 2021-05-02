@@ -1,37 +1,18 @@
-## Welcome to GitHub Pages
+# Slam-bot
 
-You can use the [editor on GitHub](https://github.com/sscheele/slam-bot/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This page details a SLAM (simultaneous localization and mapping) robot that was built as a final project for ECE 4180 at Georgia Tech. To view source code for this project, please click the blue "view on GitHub" button in the upper-right corner of this webpage.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Project Idea
 
-### Markdown
+The intention of this project was to create a simple, cheap, and easily reproducible SLAM robot. This was accomplished using only parts found in the 4180 Mbed kits, which are easily found on Sparkfun. The robot uses a lidar sensor mounted on a cheap brushed DC motor to sense its surroundings, and performs position estimation using an IMU and dead reckoning. Two more brushed DC motors are used for navigation.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Components List
 
-```markdown
-Syntax highlighted code block
+## Schematic
 
-# Header 1
-## Header 2
-### Header 3
+## Video Demo
 
-- Bulleted
-- List
+`![Image](src)`
 
-1. Numbered
-2. List
+[Link to video](https://youtube.com)
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sscheele/slam-bot/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
