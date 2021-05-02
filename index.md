@@ -8,6 +8,14 @@ The intention of this project was to create a simple, cheap, and easily reproduc
 
 ## Components List
 
+- Mbed LPC1768
+- Raspberry Pi Zero W
+- Magician Chassis/Robot kit: https://www.sparkfun.com/products/retired/10825
+- Extra DG01D-A130 gearbox/motor/wheel (for lidar platform - the Magician Chassis kit comes with two gearbox/motor/wheel combinations, but a third is required)
+- LSM9DS1 9dof IMU (https://www.sparkfun.com/products/13284)
+- VL53L0X LIDAR distance sensor (https://www.adafruit.com/product/3317)
+- 2x TB6612FNG dual H-bridge (https://www.pololu.com/product/713)
+
 ## Schematic
 
 ## Video Demo
