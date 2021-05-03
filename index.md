@@ -13,14 +13,17 @@ The intention of this project was to create a simple, cheap, and easily reproduc
 - Magician Chassis/Robot kit: https://www.sparkfun.com/products/retired/10825
 - Extra DG01D-A130 gearbox/motor/wheel (for lidar platform - the Magician Chassis kit comes with two gearbox/motor/wheel combinations, but a third is required)
 - LSM9DS1 9dof IMU (https://www.sparkfun.com/products/13284)
-- VL53L0X LIDAR distance sensor (https://www.adafruit.com/product/3317)
+- 2x VL53L0X LIDAR distance sensor (https://www.adafruit.com/product/3317)
 - 2x TB6612FNG dual H-bridge (https://www.pololu.com/product/713)
 
 ## Design Overview
 
-The Raspberry Pi serves to process sensor data and direct exploration, while the mbeds are responsible for control and real-time components. To assemble the project, create the schematics found below using the components listed above. Connect the Mbed responsible for controlling the sensing platform to the Raspberry Pi with a USB cable. The portion of the design responsible for the robot's motion follows the design of the Magician Chassis/Robot kit from the components list, then the sensing portion is placed on top.
+The Raspberry Pi serves to process sensor data from the lidar and serve a webpage with current mapping data, while the mbeds are responsible for control and real-time components. To assemble the project, create the schematics found below using the components listed above. Connect the Mbed responsible for controlling the sensing platform to the Raspberry Pi with a USB cable. The portion of the design responsible for the robot's motion follows the design of the Magician Chassis/Robot kit from the components list, then the sensing portion is placed on top. The second lidar sensor and the mbed responsible for motor control are mounted on the lower level. The second lidar sensor serves to detect obstacles directly in front of the robot.
 
 ## Schematics
+
+![Sensor schematic](img/sensor-schematic.png)
+![Motion circuit schematic](img/driver-schematic.png)
 
 ## Video Demo
 
