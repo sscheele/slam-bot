@@ -32,7 +32,7 @@ The second schematic shows how the second mbed is attached to both of the robot'
 
 ## Video Demo
 
-[Link to video](https://youtube.com)
+[Link to video](https://youtu.be/2tQme8v7Ppk)
 
 ## Future Work
 The solid-state lidar IC on a rotating platform worked well for this project, and was a great deal easier and cheaper than typical lidar solutions. With slight enhancements, such as an encoder, a slip ring, and potentially a couple of additional lidar ICs, this could replace much more expensive lidar solutions.
