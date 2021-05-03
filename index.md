@@ -16,7 +16,11 @@ The intention of this project was to create a simple, cheap, and easily reproduc
 - VL53L0X LIDAR distance sensor (https://www.adafruit.com/product/3317)
 - 2x TB6612FNG dual H-bridge (https://www.pololu.com/product/713)
 
-## Schematic
+## Design Overview
+
+The Raspberry Pi serves to process sensor data and direct exploration, while the mbeds are responsible for control and real-time components. To assemble the project, create the schematics found below using the components listed above. Connect the Mbed responsible for controlling the sensing platform to the Raspberry Pi with a USB cable. The portion of the design responsible for the robot's motion follows the design of the Magician Chassis/Robot kit from the components list, then the sensing portion is placed on top.
+
+## Schematics
 
 ## Video Demo
 
