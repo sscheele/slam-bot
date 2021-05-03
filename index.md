@@ -25,7 +25,7 @@ The Raspberry Pi serves to process sensor data from the lidar and serve a webpag
 Since no encoders were available to use on the sensor platform, we instead estimate platform rotation in the following manner: two wires are attached to pins 25 and 26 on the mbed, and set as pullup inputs. The wires are sufficiently stiff that they retain their shape when bent and spring back after light contact with other surfaces. The wires define the left and right edge of the arc which the sensor platform can travel. A third wire, connected to ground, is attached to the edge of the sensor platform such that it will contact one of the first two wires when the platform is rotated to a certain position. By attaching interrupts to the falling edges of pins 25 and 26, we can know exactly when the platform reaches on of these positions. Using the total time to complete a sweep from one wire to the other, as well as the time elapsed between the start of the sweep and a lidar detection event, and assuming a constant angular velocity of the platform, we extrapolate the angle of the sensing platform at each detection event. 
 
 ## Schematics
-The first schematic shows how to attach the first mbed to the sensor platform on top of the robot. 
+The first schematic shows how to attach the first mbed to the sensor platform on top of the robot. The open switches on pins 25 and 26 are the wires at each edge of the platform's arc, as described in the "Sensor platform" section.
 ![Sensor schematic](img/sensor-schematic.png)
 The second schematic shows how the second mbed is attached to both of the robot's wheels, the IMU, and the second lidar sensor (used for collision avoidance).
 ![Motion circuit schematic](img/driver-schematic.png)
