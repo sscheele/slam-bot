@@ -53,13 +53,22 @@ void parse_lidar(char* data, int length) {
 	}
 	n_lidar_points = curr_lidar_idx;
 }
- 
 int main(int argc, char ** argv) {
   int fd;
   char buf[256];
   // Open the Port. We want read/write, no "controlling tty" status, 
   // and open it no matter what state DCD is in
-  fd = open("/dev/ttyACM1", O_RDWR | O_NOCTTY | O_NDELAY);  
+  
+  FILE *datafile;
+  datafile = fopen("/var/www/html/index.html","w");
+
+  if (datafile == NULL) {
+    printf("file open error");
+  }
+  
+  fprintf(datafile, "<!DOCTYPE html>\n<html>\n<body>\n");
+  
+  fd = open("/dev/ttyACM0", O_RDWR | O_NOCTTY | O_NDELAY);  
   //open mbed's USB virtual com port
   if (fd == -1) {  
     perror("open_port: Unable to open /dev/ttyACM0 - ");
@@ -83,29 +92,49 @@ int main(int argc, char ** argv) {
   char should_read;
   int bytes_read, next_buf_idx;
   write(fd,"1",1);
+  
   while (1) {
 	should_read = 1;
 	next_buf_idx = 0;
 	while (should_read) {
 	  bytes_read = read(fd, &message, 1);
+	  
 	  if (bytes_read) {
 		buf[next_buf_idx] = message;
 		next_buf_idx++;
+		
 	  }
 	  if (message == '\0') {
 		should_read = 0;
+		//printf("reached end of message");
 	  }
 	}
 	printf("%s\n", buf);
 	parse_lidar(buf, next_buf_idx);
 	for (int i = 0; i < n_lidar_points; i++) {
-		printf("x: %0.2f, y: %0.2f\n", lidar_points[i].x, lidar_points[i].y);
+		float x = lidar_points[i].x;
+		float y = lidar_points[i].y;
+		
+		printf("x: %0.2f, y: %0.2f\n", x, y);
+		fprintf(datafile, "%0.2f,%0.2f\n", x, y);
+		//printf("data sent to data.txt\n");
+		fflush(datafile);
 	}
+	
+	readings++;
+	sleep(2);
+	
+	
+	write(fd,"1",1);
+	
+	
 	
   }
   
   
-  
+  fprintf(datafile, "\n</body>\n</html>");
+  // Don't forget to clean up and close the port
+  fclose(datafile);
   // Don't forget to clean up and close the port
   tcdrain(fd);
   close(fd);
