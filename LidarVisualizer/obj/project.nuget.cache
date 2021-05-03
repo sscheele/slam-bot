@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "tyKQYAG2BUsqFDxgFXV5C3zDgmXIKUHt8/ytK+H34xCDaM0LlMEeZigDZ1PDEfLxQnezIMvo3J98jYWIxwwCSw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\semcd\\Desktop\\ECEFinal\\LIDARVisualizer\\LidarVisualizer\\LidarVisualizer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\semcd\\.nuget\\packages\\htmlagilitypack\\1.11.33\\htmlagilitypack.1.11.33.nupkg.sha512"
+  ],
+  "logs": []
+}
